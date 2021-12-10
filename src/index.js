@@ -22,7 +22,7 @@ const projects = {
 }
 
 ReactDOM.render(
-	<div className={"containerOne pb-9"}>
+	<div className=" containerOne ">
 		<BrowserRouter>
 			<Routes>
 				<Route path="/"                        element={<App      title={"Home"} />} />

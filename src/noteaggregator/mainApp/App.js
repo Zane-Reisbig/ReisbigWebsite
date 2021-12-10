@@ -96,20 +96,23 @@ export default class App extends react.Component {
                         <TextArea
                             onChange={this.inputChange}
                             value={this.state.inputText}
-                            placeholder={"This is the input text."}/> 
+                            placeholder={"This is the input text."}
+                            rows={7}/> 
                     </div>
                     <div>
                         <TextArea
                             onChange={this.ignoreChange}
                             value={this.state.ignoreText}
-                            placeholder={"Place words you want to ignore here."}/> 
+                            placeholder={"Place words you want to ignore here."}
+                            cols={50}
+                            rows={3}/> 
                     </div>
                     <div>
                         <button
                             onClick={this.handleClick}
                             className={"border-2 border-black rounded-lg px-4 py-1 my-3 float-left"}
                             id="ag-button">
-                            Aggregate  
+                            Count Lines  
                         </button>
                     </div>
                     <div>
@@ -117,7 +120,8 @@ export default class App extends react.Component {
                             placeholder={"This will be the output"}
                             onChange={() => {}}
                             value={this.state.outputText}
-                            disabled/>
+                            disabled
+                            rows={7}/>
                     </div>
                 </div>
                 <div className="mt-2">

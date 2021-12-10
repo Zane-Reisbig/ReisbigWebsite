@@ -9,11 +9,11 @@ export default function Other(props) {
             <div>
                 <div className="flex-1 items-center">
                     <div>
-                        <h1>Other Stuff</h1> 
+                        <h1>Think of the possiblities of this page</h1> 
                     </div>
 
                     <div>
-                        <h1>Other Stuff</h1> 
+                        <h1>What could I possibly put here?</h1> 
                     </div>
                 </div>
             </div>
