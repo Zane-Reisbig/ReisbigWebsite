@@ -93,7 +93,6 @@ export default class App extends react.Component {
             <div className="my-2 mt-1">
                 <div className="mx-5 text-center inline-block">
                     <div>
-                        asd:
                         <TextArea
                             onChange={this.inputChange}
                             value={this.state.inputText}
