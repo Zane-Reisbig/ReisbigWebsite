@@ -1,0 +1,44 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.containerOne {
+  max-width: 800px;
+  min-width: 800px;
+  margin: 0 auto;
+}
+
+.bottom {
+  min-height: calc(100vh - 50px);
+}
+
+.footer {
+  height: 50px;
+}
+
+
+.hoverAnimation:hover {
+  transform: scale(1.1);
+  transition: all 0.3s ease-in-out;
+}
+
+.easeOut {
+  transition: all 0.3s ease-in-out;
+}
+
+.clickTransition:active {
+  transform: scale(1.4);
+  transition: all 0.2s ease-in-out;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
