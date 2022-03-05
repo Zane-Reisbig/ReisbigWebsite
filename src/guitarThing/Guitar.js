@@ -41,17 +41,17 @@ export default class Guitar extends React.Component {
 		this.setNoteHandler();
 	}
 
-	setNoteHandler(){
+	async setNoteHandler(){
 		let notes = [];
 		for (let i = 0; i < this.state.amount; i++) {
 			let note = this.state.allPossible[Math.floor(Math.random() * this.state.allPossible.length)];
 			notes.push(<Note noteName={note} checked={this.state.useOctives} key={i}/>);
 		}
-		this.setState({notes: notes});
+		await this.setState({notes: notes});
 	}
-	setAmountHandler(e){
-		this.setState({amount : e.target.value})
-		this.setNoteHandler();
+	async setAmountHandler(e){
+		await this.setState({amount : e.target.value})
+		await this.setNoteHandler();
 	}
 
     render(){
@@ -62,7 +62,8 @@ export default class Guitar extends React.Component {
 				<div>
 					<div className="flexSpace ">
 						<div>
-							<label>{this.state.amount}<input className="rangeSelector" type={"range"} value={this.state.amount} onChange={this.setAmountHandler} min={2} max={50}></input></label>
+							<label id="range-label">Amount: {this.state.amount}</label><input className="rangeSelector" type={"range"} value={this.state.amount} onChange={this.setAmountHandler} min={1} max={50}></input>
+							<button className=" ml-4 py-1 px-2 border-2 border-black rounded-md hover:bg-gray-300 transform active:translate-y-0.5 " onClick={this.setNoteHandler}>Generate</button>
 						</div>
 						<div className="flex">
 							<label>Use Octives<input id="check" type={"checkbox"} onChange={async (e) => {await this.setState({useOctives:e.target.checked}); this.setNoteHandler()}}></input></label>

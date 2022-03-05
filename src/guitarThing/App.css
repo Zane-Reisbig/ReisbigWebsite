@@ -31,3 +31,9 @@
 #check {
     margin-left: 20px;
 }
+
+#range-label{
+    display: inline-block !important;
+    width: 20px;
+    margin-right: 10px;
+}
