@@ -12,12 +12,15 @@ import Projects from './components/Projects';
 import PunchIt from './timeCounter/PunchIt';
 import NoteApp from './noteaggregator';
 
+import Guitar from './guitarThing/Guitar';
+
 
 // 1: Name of the project
 // 2: Route to the project
 const projects = {
 	"Punch It": "punchIt",
 	"Line Counter" : "noteaggregator",
+	"Guitar App": "guitar",
 	"Coming Soon": "egg",
 }
 
@@ -30,7 +33,8 @@ ReactDOM.render(
 				<Route path="other"                    element={<Other    title={"Other"} />} />
 				<Route path="projects"                 element={<Projects title={"Projects"} projects={projects}/>} />
 				<Route path="projects/punchit"         element={<PunchIt  title={"Punch It"} />} />
-				<Route path="projects/noteaggregator"  element={<NoteApp  title={"Note Aggregator"} />} />	
+				<Route path="projects/noteaggregator"  element={<NoteApp  title={"Note Aggregator"} />} />
+				<Route path="projects/guitar"          element={<Guitar   title={"Eddie Van Halen"} />} />
 
 				<Route path="projects/egg"     		   element={<Egg      title={"It's not easter"} />} />
 			</Routes>

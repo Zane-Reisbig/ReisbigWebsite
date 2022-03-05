@@ -1,0 +1,29 @@
+.flexSpace {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+}
+
+.flex {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.inline {
+    display: inline;
+}
+
+.main-container {
+    width: 60%;
+    margin: 0 auto;
+    padding: 0;
+}
+
+.m-x20{
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.rangeSelector{
+    transform: translateY(5px);
+}
