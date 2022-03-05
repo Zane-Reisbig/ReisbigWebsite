@@ -14,7 +14,7 @@
 }
 
 .main-container {
-    width: 60%;
+    width: 100%;
     margin: 0 auto;
     padding: 0;
 }
@@ -25,5 +25,9 @@
 }
 
 .rangeSelector{
-    transform: translateY(5px);
+    transform: translate(5px, 5px);
+}
+
+#check {
+    margin-left: 20px;
 }

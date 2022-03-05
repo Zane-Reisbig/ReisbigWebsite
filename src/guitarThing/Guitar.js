@@ -1,6 +1,9 @@
 import React from "react";
 import Note from "./Note";
 
+import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
+
 import "./App.css";
 
 export default class Guitar extends React.Component {
@@ -53,6 +56,8 @@ export default class Guitar extends React.Component {
 
     render(){
 		return(
+		<>
+			<Navbar title={this.props.title}/>
 			<div className="main-container">
 				<div>
 					<div className="flexSpace ">
@@ -60,7 +65,7 @@ export default class Guitar extends React.Component {
 							<label>{this.state.amount}<input className="rangeSelector" type={"range"} value={this.state.amount} onChange={this.setAmountHandler} min={2} max={50}></input></label>
 						</div>
 						<div className="flex">
-							<label>Use Octives<input type={"checkbox"} onChange={async (e) => {await this.setState({useOctives:e.target.checked}); this.setNoteHandler()}}></input></label>
+							<label>Use Octives<input id="check" type={"checkbox"} onChange={async (e) => {await this.setState({useOctives:e.target.checked}); this.setNoteHandler()}}></input></label>
 						</div>
 					</div>
 				</div>
@@ -72,7 +77,9 @@ export default class Guitar extends React.Component {
 						})
 					}
 				</div>
+				<Footer/>
 			</div>
+		</>
 		);
 	};
 }
