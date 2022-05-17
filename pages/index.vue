@@ -1,10 +1,14 @@
 <template>
   <div id="main-content">
     <Header />
-    <div id="container">
+    <div id="container-index">
       <p>My name is Zane Reisbig. I am a {{getAgeOfMe()}} year old software developer from Michigan.</p>
       <p>I have made a few projects, you can check them out on the Nav-Bar up top.</p>
       <p>Or check out my github to see everything, not just the web projects!</p>
+      <div id="email-section">
+        <p><a href="mailto:zanedreisbig@yahoo.com?subject=Reisbig.io Link">zanedreisbig@yahoo.com</a></p>
+        <p id="email-after">Opens Mail Client</p>
+      </div>
       <div id="logo-container">
         <a
           href="https://github.com/SRGTxTwinkie"
@@ -55,9 +59,27 @@ export default Vue.extend({
 })
 
 </script>
-<style>
+<style scoped>
   body {
-    overflow: hidden;
+    overflow: hidden !important;
+  }
+  
+  #email-section {
+    margin-top: 20px !important;
+  }
+
+  #email-section a {
+    color : #0a66c2;
+  }
+
+  #email-after {
+    opacity: 0;
+    text-align: center;
+    transition: all 0.5s ease-in-out;
+  }
+
+  #email-section:hover #email-after {
+    opacity: 1;
   }
 
   #github-logo {
@@ -70,6 +92,7 @@ export default Vue.extend({
     display: inline-block;
     margin-left: 50px;
     opacity: 0.5;
+    transform: scale(1.2);
   }
 
   #linkedin-logo, #github-logo {
@@ -88,22 +111,30 @@ export default Vue.extend({
     margin-top: 20px;
   }
 
-  #container {
+  #container-index {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     height: 100vh;
+    font-size: 1.3em;
   }
 
-  #container p {
+  #container-index p {
     color: white;
     margin: 0 10px;
   }
 
   #main-content {
     background-color: #141414;
-    font-size: 1.5em;
   }
+
+  @media only screen and (max-width: 800px) {
+    #container-index {
+      height: 100vh;
+    }
+  }
+
+
 
 </style>

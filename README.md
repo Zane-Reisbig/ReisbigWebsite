@@ -2,7 +2,7 @@
 
 ## Build Setup
 
-```bash
+```bash[](about:blank#blocked)
 # install dependencies
 $ yarn install
 
