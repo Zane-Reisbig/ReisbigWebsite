@@ -1,6 +1,6 @@
 <template>
   <div id="main-content">
-    <Header />
+    <Page-Header />
     <div id="container-about">
       <h1>About <span>Me</span></h1>
       <p>Zane <span>Reisbig</span></p>
@@ -9,17 +9,19 @@
       <p>
         I am a software engineer with a passion for creating beautiful,
         intuitive, and functional user interfaces. I am currently working at
-        <Link to="https://www.priorityhealth.com/">Priority Health</Link>
+        <PageLink to="https://www.priorityhealth.com/"
+          >Priority Health</PageLink
+        >
         as a claims analyst.
       </p>
       <p>
         I am a self taught developer with a background in Javascript, HTML, CSS,
         and React. I am currently learning Vue with the
-        <Link to="https://nuxtjs.org/">nuxt.js</Link> framework.
+        <PageLink to="https://nuxtjs.org/">nuxt.js</PageLink> framework.
       </p>
       <p>
-        I have a lot of experience in Java, Javascript, Python, C#.
-        I mostly focus on JS/TS, but I am fluent in Python and C# as well.
+        I have a lot of experience in Java, Javascript, Python, C#. I mostly
+        focus on JS/TS, but I am fluent in Python and C# as well.
       </p>
       <p>
         I use Python at my every day job to automate and analyze large
@@ -28,7 +30,9 @@
       <p>
         I have a lot of experience with many libraries, built-in and external. I
         am also the author of the
-        <Link to="https://www.github.com/SRGTxTwinkie/Automation-Reborn">Automation Reborn</Link>
+        <PageLink to="https://www.github.com/SRGTxTwinkie/Automation-Reborn"
+          >Automation Reborn</PageLink
+        >
         library, the <i>coolest</i> thing I have ever made.
       </p>
     </div>
@@ -39,8 +43,8 @@
 import Vue from 'vue'
 
 export default Vue.extend({
-  name: 'IndexPage',
-  methods: {},
+    name: "IndexPage",
+    methods: {},
 })
 </script>
 <style scoped>

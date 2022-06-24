@@ -3,7 +3,7 @@
     <div id="logo">
       <NuxtLink to="/">
         <span id="logo-span-1">Reisbig</span
-        ><span @mousedown="changeSuffix()" id="logo-span-2">.io</span>
+        ><span id="logo-span-2" @mousedown="changeSuffix()">.io</span>
       </NuxtLink>
     </div>
     <div class="menu-item">
@@ -11,9 +11,6 @@
     </div>
     <div class="menu-item">
       <NuxtLink to="/about">About</NuxtLink>
-    </div>
-    <div class="menu-item">
-      <NuxtLink to="/project-overview" id="project-overview"></NuxtLink>
     </div>
     <div
       @mouseenter="toggleDrop()"
@@ -24,10 +21,13 @@
         Projects<span id="project-v"> v</span>
       </div>
       <div id="header-projects-dropdown">
-        <div class="menu-item" v-for="item in drop_items" :key="item[2]">
+        <div v-for="item in drop_items" :key="item[2]" class="menu-item">
           <NuxtLink :to="item[1]"> > {{ item[0] }}</NuxtLink>
         </div>
       </div>
+    </div>
+    <div class="menu-item">
+      <NuxtLink id="project-overview" to="/project-overview"></NuxtLink>
     </div>
   </div>
 </template>
@@ -38,9 +38,9 @@ export default {
     return {
       previous_suffix: '',
       drop_items: [
-        ['Coming Soon', 'coming-soon', 1],
-        ['Coming Soon', 'coming-soon', 2],
-        ['Coming Soon', 'coming-soon', 3],
+        ['Automation Reborn', '/project-overview#automation-reborn', 1],
+        ['Reisbig.io', '/project-overview#reisbig-io', 2],
+        ['punchit.app', '/project-overview#punchit-app', 3],
       ],
     }
   },
@@ -72,7 +72,7 @@ export default {
 
     changeSuffix() {
       const suffixes = ['.io', '.com', '.org', '.net', '.edu', '.gov', '.xyz']
-      var suffix = suffixes[Math.floor(Math.random() * suffixes.length)]
+      let suffix = suffixes[Math.floor(Math.random() * suffixes.length)]
       while (suffix === this.previous_suffix) {
         suffix = suffixes[Math.floor(Math.random() * suffixes.length)]
       }
@@ -91,9 +91,9 @@ export default {
     },
 
     getRandomColor() {
-      var letters = '0123456789ABCDEF'
-      var color = '#'
-      for (var i = 0; i < 6; i++) {
+      const letters = '0123456789ABCDEF'
+      let color = '#'
+      for (let i = 0; i < 6; i++) {
         color += letters[Math.floor(Math.random() * 16)]
       }
       return color
@@ -104,7 +104,7 @@ export default {
 <style scoped>
 :root {
   --logo-size-lg: 1em;
-  --header-bg-color: #222831;
+  --header-bg-color: #222831d3;
   --lighter-bg-color: #393e46;
   --accent-color: #00adb5;
 }
@@ -181,10 +181,13 @@ export default {
   min-width: max-content;
   padding: 10px 30px;
   cursor: pointer;
-  margin: 10px 10px 0px;
-  align-self: flex-start;
   transition: all 0.2s ease-in-out;
   resize: none;
+  text-align: left;
+}
+
+.menu-item a {
+  text-align: left;
 }
 
 .menu-item:hover {
@@ -206,17 +209,20 @@ export default {
   opacity: 0;
   position: absolute;
   float: left;
-  background-color: var(--header-bg-color);
   transform: translateX(20px);
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
   transition: all 0.1s ease-in-out;
+
+  /* Why won't this work :( */
+  /* TODO: fix this lmao */
+  background-color: var(--header-bg-color);
+  backdrop-filter: blur(5px);
 }
 
 #header-projects-dropdown div {
   padding: 2px;
   margin-top: 1px;
-  text-align: center;
 }
 
 #header-projects-dropdown div:nth-last-child(1) {
@@ -235,7 +241,7 @@ export default {
   }
 
   #header-projects-dropdown {
-    transform: translateX(-20px);
+    transform: translateX(-50px);
   }
 
   #header-container {
