@@ -50,7 +50,7 @@
       </div>
 
       <div class="post" id="YAFE">
-        <p>punchIt.app</p>
+        <p>YAFE (Yet Another File Explorer)</p>
         <a href="https://github.com/SRGTxTwinkie/YAFE" class="postlink">GitHub Link</a>
         <img src="../images/YAFEMain.png" alt="A GUI showing file names and paths">
         <p class="description">
