@@ -27,7 +27,7 @@
       </div>
       <div class="post" id="reisbig-io">
         <p>Reisbig.io</p>
-        <a href="https://github.com/SRGTxTwinkie/ReisbigWebsite/blob/rewrite" class="postlink">GitHub Link</a>
+        <a href="https://github.com/SRGTxTwinkie/ReisbigWebsite" class="postlink">GitHub Link</a>
         <img src="../images/ReisbigIO.png" alt="another picture of code">
         <p class="description">
           <ul>
