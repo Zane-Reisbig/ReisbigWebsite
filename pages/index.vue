@@ -15,15 +15,15 @@
       </p>
       <div id="email-section">
         <p>
-          <a href="mailto:zanedreisbig@yahoo.com?subject=Reisbig.io Link"
-            >zanedreisbig@yahoo.com</a
+          <a href="mailto:zreisbigbusiness@gmail.com?subject=Reisbig.io Link"
+            >zreisbigbusiness@gmail.com</a
           >
         </p>
         <p id="email-after">Opens Mail Client</p>
       </div>
       <div id="logo-container">
         <a
-          href="https://github.com/SRGTxTwinkie"
+          href="https://github.com/Zane-Reisbig"
           alt="Link to my GitHub"
           target="_blank"
         >

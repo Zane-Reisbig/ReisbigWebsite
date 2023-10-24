@@ -5,7 +5,7 @@
       <div class="post" id="automation-reborn">
         <p>Automation Reborn</p>
         <a
-          href="https://github.com/SRGTxTwinkie/Automation-Reborn"
+          href="https://github.com/Zane-Reisbig/Automation-Reborn"
           target="_blank"
           class="postlink"
           >Github Link</a
@@ -27,7 +27,7 @@
       </div>
       <div class="post" id="reisbig-io">
         <p>Reisbig.io</p>
-        <a href="https://github.com/SRGTxTwinkie/ReisbigWebsite" class="postlink">GitHub Link</a>
+        <a href="https://github.com/Zane-Reisbig/ReisbigWebsite" class="postlink">GitHub Link</a>
         <img src="../images/ReisbigIO.png" alt="another picture of code">
         <p class="description">
           <ul>
@@ -39,7 +39,7 @@
 
       <div class="post" id="punchit-app">
         <p>punchIt.app</p>
-        <a href="https://github.com/SRGTxTwinkie/punchIt.app" class="postlink">GitHub Link</a>
+        <a href="https://github.com/Zane-Reisbig/punchIt.app" class="postlink">GitHub Link</a>
         <img src="../images/Punchit.png" alt="believe it or not another picture of code">
         <p class="description">
           <ul>
@@ -51,7 +51,7 @@
 
       <div class="post" id="YAFE">
         <p>YAFE (Yet Another File Explorer)</p>
-        <a href="https://github.com/SRGTxTwinkie/YAFE" class="postlink">GitHub Link</a>
+        <a href="https://github.com/Zane-Reisbig/YAFE" class="postlink">GitHub Link</a>
         <img src="../images/YAFEMain.png" alt="A GUI showing file names and paths">
         <p class="description">
           <ul>
